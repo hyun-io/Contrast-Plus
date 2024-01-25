@@ -3,7 +3,7 @@
  * @author Hyun
  * @authorId 1010097228670566480
  * @description A dark contrast theme.
- * @version 1.0.0
+ * @version 1.1
  * @donate https://hyun.aratec.io
  * @invite none
  */
@@ -14,22 +14,22 @@
 .theme-dark {
     --text-normal: #dcddde;
     --text-muted: #4a4a52;
-    --text-link: #E2EA46;
+    --text-link: #36BCBA;
     --text-positive: #50dc7d;
-    --text-warning: #F65606;
-    --text-danger: #F65606;
+    --text-warning: #bc3638;
+    --text-danger: #bc3638; /* notification colour */
     --text-brand: #6e6af6;
     --interactive-normal: #b9bbbe;
     --interactive-hover: #dcddde;
     --interactive-active: #fff; 
     --interactive-muted: #4f545c;
-    --background-primary: #0b0b0d;
-    --background-secondary: #010103;
+    --background-primary: #050101;
+    --background-secondary: #010505;
     --background-secondary-alt: #010103;
-    --background-tertiary: #010103;
+    --background-tertiary: #0f0f0f;
     --background-accent: #4f545c;
     --background-floating: #010103;
-    --modal-background: #010103;
+    --modal-background: #010505;
     --channeltextarea-background: #010103;
     --info-positive-text: #fff;
     --info-warning-text: #fff;
@@ -42,7 +42,7 @@
     --background-message-hover: rgba(4, 4, 5, 0.07);
     --mention-background: rgba(54, 188, 186, 0.1);
     --mention-foreground: #36BCBA;
-    --scrollbar-auto-thumb: #E2EA46;
+    --scrollbar-auto-thumb: #36BCBA;
     --brand-experiment: #4a4a52;
     --brand-experiment-hover: #6f6af64d;
     --brand-experiment-560: #6e6af6;
@@ -67,17 +67,17 @@
 /* Message reply box */
 .scrollableContainer__33e06 {
   border: 1px solid #303737;
-  border-radius: 32px;
+  border-radius: 7px;
   padding: 10px 0 10px 0;
 }
 
 .interactiveSelected_ec846b {
-  background-color: transparent;
+  background-color: var(--background-tertiary);
   border-left: 4px var(--text-link) solid;
 }
 
 .interactive__776ee:hover {
-  background-color: transparent;
+  background-color: var(--background-tertiary);
 }
 
 .embedFull__8dc21 {
@@ -85,7 +85,7 @@
   border-radius: 10px;
   padding-left: 3px;
   margin: 6px 0 6px 0;
-  background: rgba(105, 109, 34, 0.1);
+  background: rgba(88, 88, 88, 0.1);
 }
 
 .wrapper_f46140 {
@@ -167,10 +167,12 @@
   box-shadow: var(--elevation-low);
 }
 
+/* Notification New Message */
 .newMessagesBar__8b6d7 {
   box-shadow: 0 0 20px 1px var(--info-warning-foreground);
 }
 
+/* Markup Code Block */
 .markup_a7e664 code {
   font-size: .875rem;
   line-height: 1.125rem;
@@ -179,7 +181,18 @@
   white-space: pre-wrap;
   scrollbar-width: thin;
   scrollbar-color: var(--background-tertiary)var(--background-secondary);
-  background: var(--background-primary);
+  background: rgba(88, 88, 88, 0.1);
   border: 1px solid var(--brand-experiment);
   padding: 10px;
+}
+
+/* Nav Sidebar */
+.wrapper_a7e7a8 {
+  overflow: hidden;
+  display: flex;
+  width: 72px;
+  flex-direction: column;
+  flex-shrink: 0;
+  position: relative;
+  background-color: var(--background-tertiary);
 }
